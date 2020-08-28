@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery Demo</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <script>
+            $(document).ready(function() {
+                $("html").append(
+                    "<body>\
+                        <div id='container'>\
+                            <div id='inner'>\
+                                <h1>jQuery</h1>\
+                                <p id='1'>Paragraph 1</p>\
+                                <p id='2'>Paragraph 2</p>\
+                                <p id='3'>Paragraph 3</p>\
+                                <p id='4'>Paragraph 4</p>\
+                                <p id='5'>Paragraph 5</p>\
+                            </div>\
+                        </div>\
+                    </body>"
+                ); // Ends the append function
+                $("#2").css({"color":"red"}); // Targets the id of "2" and using css changes the color of just that id
+                $("#3").click(function() {
+                    $('h1').hide()
+                }); // Ends the click function
+                // Here I'm going to use the .on() method
+                $("#1").on("click", function() {
+                    $("#2").hide()
+                }); // Ends the .on() method
+                // Fade animation
+                $("#4").fadeOut(5000);
+            }); // Ends the ready function
+        </script>
+    </body>
+</html>
